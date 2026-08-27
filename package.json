@@ -1,0 +1,26 @@
+{
+  "name": "azure-mern-task-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm --prefix client run build",
+    "dev": "concurrently \"node --watch server/index.js\" \"npm --prefix client run dev\"",
+    "start": "node server/index.js",
+    "test": "node --test",
+    "postinstall": "npm --prefix client install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "supertest": "^7.1.4"
+  }
+}
